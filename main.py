@@ -1,2 +1,2 @@
 wake up jarvis
- f
+ fgit push 
