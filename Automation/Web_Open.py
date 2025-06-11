@@ -22,7 +22,7 @@ def openweb(webname):
         print("..opening..")
 
 
-# web_input =input("web name : ")
-# while True:
-#     web_input=input("web name : ")
-#     openweb(web_input)
+web_input =input("web name : ")
+while True:
+    web_input=input("web name : ")
+    openweb(web_input)
