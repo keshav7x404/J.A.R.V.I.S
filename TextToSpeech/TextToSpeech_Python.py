@@ -6,6 +6,3 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-speak("hello")
-speak("hello")
-speak("hello")
