@@ -16,7 +16,4 @@ def speak(text:str,voice: str ='en-CA-LiamNeural')->None:
 
     except Exception as e:
         print(e)
-        
-while True:
-    x = input()
-    speak(x)
+
