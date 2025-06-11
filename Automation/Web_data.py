@@ -119,5 +119,5 @@ websites = {
     "hindu": "thehindu.com",
     "toi": "timesofindia.indiatimes.com",
     "hindustantimes": "hindustantimes.com",
-    "indianexpress": "indianexpress.com",
+    "indianexpress": "indianexpress.com"
 }
