@@ -1,5 +1,12 @@
-from open_App import open_App
-from Web_Open import openweb
+from Automation.open_App import open_App
+from Automation.Web_Open import openweb
+import pyautogui as gui
+from Automation.Play_Music_YT import play_music_on_youtube
+from Automation.Play_Music_Sfy import play_music_on_spotify
+from TextToSpeech import Fast_DF_TTS
+
+def close():
+    gui.hotkey('alt','f4')
 
 def Open_Brain(text):
     if "website" in text or "open website named" in text:
@@ -12,6 +19,29 @@ def Open_Brain(text):
         text = text.replace("app", "").strip()
         open_App(text)
 
-while True:
-    x = input("Hukum mere aaka: ")
-    Open_Brain(x)
+
+def Auto_main_brain(text):
+    if text.startswith("open"):
+        Open_Brain(text)
+    
+    elif "close" in text:
+        close()
+    elif "play music" in text or "play music on youtube" in text:
+        Fast_DF_TTS.speak(" Which song do you want to play sir ")
+        x=input()
+        play_music_on_youtube(x)
+    elif "play some music" in text or "play music on spotify" in text:
+        Fast_DF_TTS.speak(" Which song do you want to play sir ")
+        x=input()
+        play_music_on_spotify(x)
+    else:
+        pass
+
+
+
+        
+    
+    
+        
+
+

@@ -1,5 +1,5 @@
 import webbrowser
-from Web_data import websites
+from Automation.Web_data import websites
 def openweb(webname):
     website_name = webname.lower().split()
     counts = {}
