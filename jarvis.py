@@ -1,6 +1,7 @@
 from Automation.Automation_brain import Auto_main_brain
 from KESHAV7x_S_to_T import listen
 import threading
+from Automation.Battery import battery_Alert
 
 def check_inputs():
      output_text=""
@@ -22,5 +23,4 @@ def Jarvis():
      t2.start()
      t1.join()
      t2.join()
-
-Jarvis()
+battery_Alert()
