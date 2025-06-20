@@ -1,0 +1,8 @@
+psutil
+requests
+playsound==1.2.2
+typing
+plautogui
+pywhatkit
+win10toast
+keshav

@@ -1,26 +1,24 @@
-from Automation.Automation_brain import Auto_main_brain
-from KESHAV7x_S_to_T import listen
 import threading
-from Automation.Battery import battery_Alert
+from internet_check import is_Online,alert
+from Data.DLG_data import offline_dlg,online_dlg
+import random
+from co_brain import Jarvis
+from TextToSpeech.Fast_DF_TTS import speak
 
-def check_inputs():
-     output_text=""
-     while True:
-         with open("input.txt","r") as file:
-             input_text =file.read().lower()
-         if input_text != output_text:
-             output_text = input_text
-             if output_text:
-                 Auto_main_brain(output_text)
-         else:
-             pass
+ran_online_dlg = random.choice(online_dlg)
+ran_offine_dlg = random.choice(offline_dlg)
 
+def main():
+    if is_Online():
+        t1=threading.Thread(target=speak,args=(ran_online_dlg,))
+        t2=threading.Thread(target=alert,args=(ran_online_dlg,))
+        t2=threading.Thread(target=alert,args=(ran_online_dlg,))
+        t1.start()
+        t2.start()
+        t1.join()
+        t2.join()
+        Jarvis()
+    else:
+        alert(ran_offine_dlg)
 
-def Jarvis():
-     t1=threading.Thread(target=listen)
-     t2=threading.Thread(target=check_inputs)
-     t1.start()
-     t2.start()
-     t1.join()
-     t2.join()
-battery_Alert()
+main()

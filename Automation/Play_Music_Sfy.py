@@ -11,6 +11,7 @@ def play_music_on_spotify(song_name):
     ui.write(song_name)
     time.sleep(1)
     ui.press("enter")
-    time.sleep(4)
-    ui.leftClick(540,550)
+    time.sleep(2)
+    ui.leftClick(150,600)
    
+# play_music_on_spotify("saavan")

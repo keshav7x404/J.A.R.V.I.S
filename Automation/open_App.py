@@ -11,4 +11,3 @@ def open_App(text):
         gui.write(text)
         time.sleep(0.2)
         gui.press("enter")
-
